@@ -19,7 +19,7 @@ function SelectWell({ setProjectId }) {
 
   useEffect(() => {
     // Fetch wells when the component is mounted
-    fetch('https://valore.onrender.com//Project_table')
+    fetch('https://valore.onrender.com/Project_table')
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error('Error fetching wells:', error));
