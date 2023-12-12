@@ -22,7 +22,7 @@ function SelectWell({ setWellID }) {
 
   useEffect(() => {
     // Fetch wells when the component is mounted
-    fetch('http://127.0.0.1:5555/Well_table')
+    fetch('https://valore.onrender.com//Well_table')
       .then((response) => response.json())
       .then((wellsData) => setWells(wellsData))
       .catch((error) => console.error('Error fetching wells:', error));

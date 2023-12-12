@@ -33,18 +33,18 @@ function OperatingAssumptions({wellID}) {
     const well_to_get_id = wellID
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:5555/Well_table/${well_to_get_id}`)
+        fetch(`https://valore.onrender.com//Well_table/${well_to_get_id}`)
             .then((response) => response.json())
             .then((file) => {
                 setData(file),
                 setProjectId(file["project_id"])
-                fetch(`http://127.0.0.1:5555/Assumptions_table/${file.assumption_id}`)
+                fetch(`https://valore.onrender.com//Assumptions_table/${file.assumption_id}`)
                     .then((response) => response.json())
                     .then((file) => {
                         setAssumptions(file), 
                         setMonth(file["prod_start_month"]), 
                         setYear(file["prod_start_year"])},                        
-                        fetch(`http://127.0.0.1:5555/Project_table`)
+                        fetch(`https://valore.onrender.com//Project_table`)
                         .then((response) => response.json())
                         .then((file) => { setProjects(file) }
                     ))
@@ -78,7 +78,7 @@ function OperatingAssumptions({wellID}) {
             // project_id: projectId
         };
 
-        fetch(`http://127.0.0.1:5555/Assumptions_table/${assumptions.id}`, {
+        fetch(`https://valore.onrender.com//Assumptions_table/${assumptions.id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ function OperatingAssumptions({wellID}) {
         .then(data => {
             console.log(data),
             
-            fetch(`http://127.0.0.1:5555/Well_table/${well_to_get_id}`, {
+            fetch(`https://valore.onrender.com//Well_table/${well_to_get_id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',

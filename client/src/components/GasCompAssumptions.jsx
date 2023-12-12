@@ -10,11 +10,11 @@ function GasCompAssumptions({wellID}) {
     const well_to_get_id = wellID
 
     useEffect(()=>{
-        fetch(`http://127.0.0.1:5555/Well_table/${well_to_get_id}`)
+        fetch(`https://valore.onrender.com//Well_table/${well_to_get_id}`)
         .then((response) => response.json())
         .then((file) => {
             setData(file)
-            fetch(`http://127.0.0.1:5555/Gas_concentration_table/${file.gas_concentration_id}`)
+            fetch(`https://valore.onrender.com//Gas_concentration_table/${file.gas_concentration_id}`)
             .then((response) => response.json())
             .then((file) => setGasCompAssumptions(file))})
     }, [])
@@ -25,7 +25,7 @@ function GasCompAssumptions({wellID}) {
         e.preventDefault()
 
 
-        fetch(`http://127.0.0.1:5555/Gas_concentration_table/${gasCompAssumptions.id}`, {
+        fetch(`https://valore.onrender.com//Gas_concentration_table/${gasCompAssumptions.id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',
