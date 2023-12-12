@@ -18,7 +18,7 @@ function DashboardContainer({wellID}) {
 
     const [data, setData] = useState(undefined)
 
-    useEffect(() => {fetch(`https://valore.onrender.com//Model_package/${wellID}`)
+    useEffect(() => {fetch(`https://valore.onrender.com/Model_package/${wellID}`)
     .then((r)=>r.json())
     .then((file)=> setData(file))}, []
     )            

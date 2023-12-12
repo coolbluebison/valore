@@ -24,7 +24,7 @@ function ProjectDashboard() {
 
     
     useEffect(() =>
-        {fetch(`https://valore.onrender.com//Project_package/${projectId}`)
+        {fetch(`https://valore.onrender.com/Project_package/${projectId}`)
         .then((r)=>r.json())
         .then((file)=> setData(file))}
         , [projectId])

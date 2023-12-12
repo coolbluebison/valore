@@ -7,7 +7,7 @@ function PricingAssumptions({wellID}) {
     const [pricingAssumptions, setPricingAssumptions] = useState([]);
 
     useEffect(() => {
-        fetch('https://valore.onrender.com//Pricing_table/1')
+        fetch('https://valore.onrender.com/Pricing_table/1')
         .then((response) => (response.json()))
         .then((file) => { setPricingAssumptions(file) } )
     }, [])
@@ -17,7 +17,7 @@ function PricingAssumptions({wellID}) {
 
         e.preventDefault()
 
-        fetch('https://valore.onrender.com//Pricing_table/1', {
+        fetch('https://valore.onrender.com/Pricing_table/1', {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',
