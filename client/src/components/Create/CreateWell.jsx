@@ -40,7 +40,7 @@ function CreateWell() {
         formData.append('file_to_upload', file)
 
 
-        fetch('http://127.0.0.1:5555/Upload_curve', {
+        fetch('https://valore.onrender.com/Upload_curve', {
             method: 'POST',
             body: formData,
           })
