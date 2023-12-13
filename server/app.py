@@ -18,8 +18,8 @@ from config import app, db, api
 # Add your model imports
 from models import Well, Assumptions, GasConcentration, ProductionCurve, Project, User, Pricing
 # Import the Single Well Model
-# import singlewellmodel
-# import projectlevelmodel
+import singlewellmodel
+import projectlevelmodel
 
 
 class PackageSend(Resource):
