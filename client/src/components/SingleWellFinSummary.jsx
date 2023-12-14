@@ -78,8 +78,6 @@ function SingleWellFinSummary( { param_data }) {
     },
     }));
 
-
-
         
     return (
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -121,14 +119,14 @@ function SingleWellFinSummary( { param_data }) {
                         <TableCell align='left' style={{ padding: '10px' }}>Total Revenue</TableCell>
                         <TableCell align='center' style={{ padding: '10px' }}>{`$ ${total_net_revenues} MM`}</TableCell>
                     </TableRow>
-                    <TableRow>
+                    {/* <TableRow>
                         <TableCell align='left' style={{ padding: '10px' }}>Realized Oil Price ($/bbl)</TableCell>
                         <TableCell align='center' style={{ padding: '10px' }}>{`$ TBD ${0}`}</TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell align='left' style={{ padding: '10px' }}>Realized Gas Price ($/Mcf)</TableCell>
                         <TableCell align='center' style={{ padding: '10px' }}>{`$ TBD ${0}`}</TableCell>
-                    </TableRow>
+                    </TableRow> */}
                     </TableBody>
                 </Table>
                 </TableContainer>

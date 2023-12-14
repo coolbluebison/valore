@@ -58,8 +58,8 @@ function App() {
           <NavLink to="PricingAssumptions" activeclassname="active">Price Assumptions</NavLink>
           <NavLink to="GasCompAssumptions" activeclassname="active">Gas Assumptions</NavLink>
           <NavLink to="CreateWell" activeclassname="active">Create a New Well</NavLink>
-          <NavLink to="Signup" activeclassname="active">Signup</NavLink>
-          <NavLink to="Login" activeclassname="active">Login</NavLink>
+          {/* <NavLink to="Signup" activeclassname="active">Signup</NavLink>
+          <NavLink to="Login" activeclassname="active">Login</NavLink> */}
 
 
 
